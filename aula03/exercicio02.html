@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testando os seletores</title>
+</head>
+<body>
+    <h1>testando os seletores DOM</h1>
+    
+    <div id="div_id">
+        <p>seletor por marca</p>
+
+
+        <p id="p_id">seletor por id</p>
+
+
+        <p name="paragrafo"> seletor por nome</p>
+    </div>
+
+
+    <script>
+
+        //seleção por marca
+        p_marca = window.document.getElementsByTagName('p')[0]
+        p_marca.style.color = 'green'
+        p_marca.style.marginBotton = '50px'
+
+
+        //seleção por ID
+        p_id = window.document.getElementById("p_id")
+        p_id.style.color = 'blue'
+
+        //seleçao por nome
+        p_nome = window.document.getElementsByName('paragrafo')[0]
+        p_nome.style.color = 'red'
+        p_nome.style.margin = '50px'
+
+        //seleção por classe
+
+        //seleção por querry !MAIS IMPORTANTE!
+        seleção_querry = window.document.querySelector('div#div_id')//div.div_class se fosse uma classe
+        //usamos "#" quando nos referimos a um id e "." para se referir a uma class 
+        seleção_querry.style.backgroundColor = 'pink'
+
+        
+    </script>
+
+</body>
+</html>
