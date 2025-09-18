@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio</title>
+
+    <style>
+
+        
+        h1{
+            font-size: 3em;
+        }
+        body{
+            background-color: rgb(91, 141, 124);
+        }
+
+
+
+        /* estilo do formulario*/
+        form#formulario{
+            display: flex;
+            flex-direction: column;   
+        }
+        label#legenda{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 2em;
+        }
+        input#input_velocidade{
+            width: 10em;
+            height: 2em;
+            margin-top: 2em;
+            margin-bottom: 2em;
+            border-radius: 10px;
+        }
+        button#botao{
+            width: 70px;
+            height: 30px;
+            margin-left: 10px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>verificador de velocidade</h1>
+
+    <form id="formulario">
+        <label id="legenda">coloque a velocidade do seu carro</label>
+        <div>
+            <input type="number" placeholder="90km/h" id="input_velocidade">
+            <button id="botao">confimar</button>
+        </div>
+    </form>
+
+    <div>
+
+    </div>
+
+
+
+    <script>
+        let velocidade = window.document.getElementById('input_velocidade')
+        let botao_velocidade = window.document.getElementById('botao')
+
+
+        botao_velocidade.addEventListener('click', clicar)
+
+        function clicar(){
+            if( velocidade.value === ""){
+                window.alert('você precisa inserir uma velocidade')
+            }else{
+                let numero =  Number(velocidade.value)
+                
+                if(numero >= 90){
+                    window.alert('você ultrapassou a velocidade ')
+                }else{
+                    window.alert('tudo certo! tenha uma boa viagem')
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>

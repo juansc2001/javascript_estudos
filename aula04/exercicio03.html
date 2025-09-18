@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somando</title>
+</head>
+<body>
+    <h1>somando valores</h1>
+    <input type="number" id="num1"> +
+    <input type="number" id="num2">
+    <button id="botao_soma">somar</button>
+    <p id="result">resultado:</p>
+
+    <script>
+
+        let botao_de_soma = window.document.querySelector('button#botao_soma')
+        botao_de_soma.addEventListener('click', somar) 
+
+        function somar(){
+            let resposta01 = window.document.getElementById('num1')
+            let resposta02 = window.document.getElementById('num2')
+            let resultado = window.document.getElementById('result')
+            
+            let numero1 = Number(resposta01.value)
+            let numero2 = Number(resposta02.value)
+
+            let soma = numero1 + numero2
+
+
+            resultado.innerText = `a soma de ${numero1} + ${numero2} = ${soma} `
+
+
+        }
+    </script>
+
+
+</body>
+</html>

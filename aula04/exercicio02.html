@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+
+    <style>
+        div#corpo_pagina {
+            display: flex;
+        }
+
+        div.circulos{
+            background-color:green;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 20px    ;
+        }
+
+        button.meu-botao{
+            background-color: #4c9dbd; /* cor de fundo */
+            color: white; /* cor do texto */
+            border: none; /* tira a borda padrão */
+            padding: 12px 24px; /* espaço interno */
+            font-size: 16px;
+            border-radius: 8px; /* arredondamento */
+            cursor: pointer; /* mãozinha ao passar */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>brincando com addEventListener</h1>
+
+    <div id="corpo_pagina">
+
+        <div>
+            <button id="botao1" class="meu-botao"> clique aqui </button>
+            <div id="circulo1" class="circulos"></div>
+        </div>
+
+        <div>
+            <button id="botao2" class="meu-botao"> clique aqui </button>
+            <div id="circulo2" class="circulos"></div>
+        </div>
+
+        <div>
+            <button id="botao3" class="meu-botao"> clique aqui </button>
+            <div id="circulo3" class="circulos"></div>
+        </div>
+
+    </div>
+    
+
+    <script>
+        let circulo01 = window.document.querySelector('div#circulo1')
+        let circulo02 = window.document.querySelector('div#circulo2')
+        let circulo03 = window.document.querySelector('div#circulo3')
+
+        let botao01 = window.document.querySelector('button#botao1')
+        let botao02 = window.document.querySelector('button#botao2')
+        let botao03 = window.document.querySelector('button#botao3')
+
+
+
+        botao01.addEventListener('click',clicar01)//(evento_dom, nome_função)
+        botao02.addEventListener('click',clicar02)//(evento_dom, nome_função)
+        botao03.addEventListener('click',clicar03)//(evento_dom, nome_função)
+
+
+        function clicar01(){
+            circulo01.style.backgroundColor = 'red'
+        }
+        function clicar02(){
+            circulo02.style.backgroundColor = 'red'
+        }
+        function clicar03(){
+            circulo03.style.backgroundColor = 'red'
+        }
+
+
+        
+    </script>
+</body>
+</html>

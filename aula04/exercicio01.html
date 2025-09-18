@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .interacao{
+            font: normal 20pt Arial;
+            background-color: aquamarine;
+            width: 400px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="interacao" class="interacao" onclick = "clikou()">
+        <p>interaja. . .</p>
+
+    </div>
+
+    
+    <div id="interacao02" class="interacao"  onmouseenter= "mouseentrou()"  onmouseout="mousesaiu()">
+
+        <p>interaja. . .</p>
+
+    </div>
+
+
+    <script>
+        let selecionar_tag = window.document.querySelector("div#interacao")
+        let selecionar_tag02 = window.document.querySelector("div#interacao02")
+
+        function clikou(){
+            selecionar_tag.style.backgroundColor =  'yellow'
+            selecionar_tag.innerText = "você clicou"
+        }
+
+        function mouseentrou(){
+            selecionar_tag02.style.backgroundColor =  'green'
+            selecionar_tag02.innerText = "passou o mouse em cima"
+        }
+
+        function mousesaiu(){
+            selecionar_tag02.style.backgroundColor = 'aquamarine'
+            selecionar_tag02.innerText = 'interaja . . .'
+        }
+
+        funcion 
+
+    </script>
+
+
+</body>
+</html>
