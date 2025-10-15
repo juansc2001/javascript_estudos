@@ -1,0 +1,34 @@
+analizador de numeros
+
+escolher um numero de 1 a 100
+
+valor é acrescentado em uma tag select
+
+output tag select é "valor 5 selecionado"
+
+
+condições:
+
+não pode ter 2 numeros iguais na lista
+
+numero nao pode ser menor q 1 nem maior que 100
+
+precisa ter algum numero
+
+
+
+output analize:
+
+quantidade de numeros cadastrados
+
+maior numero da lista
+
+menor numero da lista
+
+soma de todos os valores 
+
+media dos valores 
+
+
+
+apos a analize a tag select limpa 
